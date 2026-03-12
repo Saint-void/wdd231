@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Home Page - WDD 231</title>
+    <meta name="description" content="WDD 231 Course Home Page for [Your Name]">
+    <meta name="author" content="[Your Name]">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/courses.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <img src="images/logo.svg" alt="Site Logo" width="50" height="50">
+            <span>Student Name</span>
+        </div>
+        <button id="menu-button" aria-label="Toggle Menu">☰</button>
+    </header>
+
+    <nav id="nav-menu">
+        <a href="#" class="active">Home</a>
+        <a href="#">Chamber Project</a>
+        <a href="#">Final Project</a>
+    </nav>
+
+    <main>
+        <h1>Home</h1>
+        
+        <div class="top-content">
+            <section class="card about-card">
+                <h2>About Me</h2>
+                <p>Massa facilisis per purus si imperdiet curae amet. Et fames lorem mi phasellus congue nascetur enim consectetur sociosqu natoque risus. Odio vehicula libero nisl viverra augue commodo pretium vivamus at duis magna. Quam fringilla convallis ridiculus malesuada accumsan potenti magnis volutpat nulla ipsum. Dis maecenas et praesent class fringilla.</p>
+            </section>
+            
+            <section class="card photo-card">
+                <h2>Student Photo</h2>
+                <img src="images/profile.jpg" alt="Student Profile Photo" loading="lazy">
+            </section>
+        </div>
+
+        <section class="card courses-card">
+            <h2>Web Certificate Courses</h2>
+            <div class="filters">
+                <button id="btn-all">All</button>
+                <button id="btn-cse">CSE</button>
+                <button id="btn-wdd">WDD</button>
+            </div>
+            <div id="course-list">
+                </div>
+            <p id="total-credits">The total credits for courses listed above is: <span></span></p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">LinkedIn</a>
+            <a href="https://github.com/saint-void/wdd231" target="_blank" aria-label="GitHub">GitHub</a>
+            <a href="https://twitter.com" target="_blank" aria-label="X">X</a>
+        </div>
+        <p>&copy; <span id="currentyear"></span> ❖ Student Name ❖ Utah, USA</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
