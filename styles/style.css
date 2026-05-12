@@ -1,0 +1,353 @@
+/* Google Font Import */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+
+/* Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Root Colors */
+
+:root {
+    --primary-color: #0f172a;
+    --secondary-color: #1e293b;
+    --accent-color: #38bdf8;
+    --background-color: #e2e8f0;
+    --card-color: #ffffff;
+    --completed-color: #14532d;
+    --text-color: #111827;
+}
+
+
+/* Body */
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+
+/* Prevent horizontal scrolling */
+
+html,
+body {
+    overflow-x: hidden;
+}
+
+
+/* Header */
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem 2rem;
+}
+
+
+/* Logo Area */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo img {
+    width: 80px;
+    height: auto;
+    object-fit: cover;
+}
+
+.logo span {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+
+/* Navigation */
+
+#menu-button {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+#nav-menu {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+#nav-menu a {
+    text-decoration: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+
+    transition: background-color 0.3s ease;
+}
+
+
+/* Hover effect */
+
+#nav-menu a:hover {
+    background-color: var(--accent-color);
+    color: black;
+}
+
+
+/* Wayfinding */
+
+#nav-menu a.active {
+    background-color: var(--accent-color);
+    color: black;
+}
+
+
+/* Main */
+
+main {
+    max-width: 1200px;
+    margin: auto;
+    padding: 1rem;
+}
+
+main h1 {
+    margin-bottom: 1rem;
+}
+
+
+/* Main Sections */
+
+.main-part {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1rem;
+}
+
+
+/* Cards */
+
+.part1,
+.part2,
+.part3 {
+    background-color: var(--card-color);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+
+/* Section Headings */
+
+.part1 h2,
+.part2 h2,
+.part3 h2 {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+
+/* About Section */
+
+.part1 p {
+    padding: 1.5rem;
+    text-align: center;
+}
+
+
+/* Student Image */
+
+.part2 {
+    text-align: center;
+}
+
+.part2 img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    margin: 1rem auto;
+}
+
+
+/* Courses Section */
+
+.part3 {
+    margin-top: 1.5rem;
+    padding-bottom: 1rem;
+}
+
+
+/* Buttons */
+
+.certificate-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    padding: 1rem;
+}
+
+.certificate-buttons button {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.certificate-buttons button:hover {
+    background-color: var(--accent-color);
+    color: black;
+}
+
+
+/* Courses Grid */
+
+#courses-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+
+    gap: 1rem;
+    padding: 1rem;
+}
+
+
+/* Course Cards */
+
+.course-card {
+    background-color: #dbe4ee;
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+
+    transition: transform 0.3s ease;
+}
+
+.course-card:hover {
+    transform: translateY(-5px);
+}
+
+
+/* Completed Courses */
+
+.completed {
+    background-color: var(--completed-color);
+    color: white;
+}
+
+
+/* Credits */
+
+#total-credits {
+    text-align: center;
+    font-weight: bold;
+    padding: 1rem;
+}
+
+
+/* Footer */
+
+footer {
+    background-color: var(--primary-color);
+    color: white;
+
+    margin-top: 2rem;
+    padding: 2rem 1rem;
+
+    text-align: center;
+}
+
+
+/* Social Media */
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+
+    margin-bottom: 1rem;
+}
+
+.social-media img {
+    width: 45px;
+    height: auto;
+
+    transition: transform 0.3s ease;
+}
+
+.social-media img:hover {
+    transform: scale(1.1);
+}
+
+
+/* Mobile Navigation */
+
+@media screen and (max-width: 768px) {
+
+    header {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #menu-button {
+        display: block;
+        align-self: flex-end;
+        margin-top: -50px;
+    }
+
+    #nav-menu {
+        display: none;
+        flex-direction: column;
+        margin-top: 1rem;
+    }
+
+    #nav-menu.open {
+        display: flex;
+    }
+
+    .main-part {
+        grid-template-columns: 1fr;
+    }
+
+    .part2 img {
+        max-width: 200px;
+    }
+}
+
+
+/* Small Phones */
+
+@media screen and (max-width: 480px) {
+
+    main {
+        padding: 0.5rem;
+    }
+
+    .certificate-buttons button {
+        width: 100%;
+    }
+
+    .logo span {
+        font-size: 1.2rem;
+    }
+}

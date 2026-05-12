@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Home Page</title>
+
+    <meta name="description" content="Personal course homepage">
+    <meta name="author" content="Donaldson Sogolo">
+
+    <link rel="stylesheet" href="styles/style.css">
+
+    <!-- JavaScript -->
+    <script src="scripts/main.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="images/my-logo.png" alt="my logo">
+            <span>Donaldson Sogolo</span>
+            <button id="menu-button">☰</button>
+        </div>
+
+        <nav id="nav-menu">
+            <a href="/" class="active">Home</a>
+            <a href="#">Chamber</a>
+            <a href="#">Final</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <h1>Home</h1>
+
+        <div class="main-part">
+
+            <section class="part1">
+                <h2>About Me</h2>
+
+                <p>
+                    Sogolo Oghenetega Donaldson is an 18-year-old Nigerian software
+                    engineering student, forex scalper, and relentless tech builder
+                    working toward turning Void Enterprises into a real force through
+                    AI, hardware, and pure refusal to stay average.
+                </p>
+            </section>
+
+            <section class="part2">
+                <h2>Student Photo</h2>
+
+                <img src="images/profile.jpg" alt="profile image">
+            </section>
+
+        </div>
+
+        <!-- Courses -->
+        <section class="part3">
+
+            <h2>Web Certificate Courses</h2>
+
+            <div class="certificate-buttons">
+                <button id="all-btn">All Courses</button>
+                <button id="cse-btn">CSE Courses</button>
+                <button id="wdd-btn">WDD Courses</button>
+            </div>
+
+            <!-- Dynamic Courses -->
+            <div id="courses-container"></div>
+
+            <!-- Credits -->
+            <p id="total-credits"></p>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <div class="social-media">
+            <a href="https://github.com/saint-void">
+                <img src="images/github.png" alt="github">
+            </a>
+
+            <a href="https://www.linkedin.com/in/donaldsogolo/">
+                <img src="images/linkedin.png" alt="linkedin">
+            </a>
+
+            <a href="https://x.com/St_void2">
+                <img src="images/twitter.png" alt="twitter">
+            </a>
+        </div>
+
+        <!-- Dynamic Footer -->
+        <p>
+            © <span id="currentyear"></span> | Donaldson Sogolo | Nigeria
+        </p>
+
+        <p id="lastModified"></p>
+
+    </footer>
+
+</body>
+
+</html>
