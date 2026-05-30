@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Lagos Chamber of Commerce | Home</title>
+    <meta name="description" content="Lagos Chamber of Commerce home page with local business events, weather, and member spotlights.">
+    <meta name="author" content="Sogolo Donaldson">
+
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+
+    <meta property="og:title" content="Lagos Chamber of Commerce | Home">
+    <meta property="og:description" content="Connect with Lagos businesses, events, weather, and chamber member spotlights.">
+    <meta property="og:image" content="https://Saint.void.github.io/wdd231/images/lagos-chamber-logo.jpg">
+    <meta property="og:url" content="https://Saint.void.github.io/wdd231/chamber/index.html">
+    <meta property="og:type" content="website">
+
+    <link rel="stylesheet" href="styles/directory.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <script src="scripts/home.js" defer></script>
+</head>
+<body>
+    <header class="trade-header">
+        <div class="brand-lockup">
+            <img class="brand-mark" src="../images/lagos-chamber-logo.jpg" alt="Lagos Chamber of Commerce Logo">
+            <div class="brand-copy">
+                <div class="chamber-name">Lagos Chamber</div>
+                <p class="chamber-kicker">Commerce and Industry</p>
+            </div>
+        </div>
+
+        <nav class="site-nav">
+            <button id="navToggle" class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">Menu</button>
+            <ul id="primaryNav" class="nav-menu">
+                <li><a href="index.html" class="current-page">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="home-hero" aria-labelledby="homeHeading">
+            <img src="images/eko.jpg" alt="Lagos business district" loading="eager">
+            <div class="home-hero-copy">
+                <p class="section-label">Lagos Chamber</p>
+                <h1 id="homeHeading">Business Starts Here</h1>
+                <a class="hero-cta" href="join.html">Join the Chamber</a>
+            </div>
+        </section>
+
+        <div class="home-layout">
+            <section class="info-panel events-panel" aria-labelledby="eventsHeading">
+                <p class="section-label">Current Events</p>
+                <h2 id="eventsHeading">This Week</h2>
+                <article>
+                    <h3>Small Business Roundtable</h3>
+                    <p>Local owners meet on Wednesday to discuss digital payments, shipping, and customer growth.</p>
+                </article>
+                <article>
+                    <h3>Export Readiness Clinic</h3>
+                    <p>Members can attend a practical session on documentation, packaging, and regional trade routes.</p>
+                </article>
+            </section>
+
+            <section class="info-panel weather-panel" aria-labelledby="weatherHeading">
+                <p class="section-label">Weather</p>
+                <h2 id="weatherHeading">Lagos Forecast</h2>
+                <div class="weather-current">
+                    <p id="currentTemp">Loading...</p>
+                    <p id="weatherDescription"></p>
+                </div>
+                <div id="forecastList" class="forecast-list" aria-label="Three day forecast"></div>
+            </section>
+        </div>
+
+        <section class="spotlight-section" aria-labelledby="spotlightHeading">
+            <div class="section-heading">
+                <p class="section-label">Spotlights</p>
+                <h2 id="spotlightHeading">Featured Members</h2>
+            </div>
+            <div id="spotlightCards" class="spotlight-grid"></div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-address">
+            <h2>Lagos Chamber of Commerce & Industry</h2>
+            <p>1 Idowu Taylor Street, Victoria Island, Lagos, Nigeria</p>
+            <p>info@lagoschamber.com | +234 1 234 5678</p>
+        </div>
+        <div class="footer-meta">
+            <p>&copy; <span id="currentYear"></span> | Sogolo Donaldson | WDD 231</p>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+</body>
+</html>

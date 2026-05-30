@@ -1,49 +1,112 @@
-/* Media Query for Screen Layout Transformations (Tablets & Desktops) */
 @media screen and (min-width: 768px) {
-
-    header {
-        display: flex;
-        justify-content: space-between;
+    .trade-header {
+        grid-template-columns: 1fr auto;
         align-items: center;
-        padding: 1.5rem 3rem;
+        padding: 1rem clamp(1.5rem, 4vw, 3rem);
     }
 
-    /* Hide the mobile navigation hamburger button on big screens */
-    #menuButton {
+    .nav-toggle {
         display: none;
     }
 
-    nav {
-        margin-top: 0;
-        background: none;
-    }
-
-    /* Spread the menu tabs side-by-side horizontally */
-    .nav-links {
-        display: flex !important;
-        gap: 1rem;
-    }
-
-    .nav-links li a {
-        border-bottom: none;
-        border-radius: 6px;
-        padding: 0.6rem 1.2rem;
-    }
-
-    /* Spread contact blocks on your footer layout */
-    footer {
-        padding: 2.5rem 3rem;
-    }
-
-    .footer-contact {
+    .nav-menu {
         display: flex;
-        justify-content: space-between;
-        align-items: center;
-        text-align: left;
+        gap: 0.4rem;
+        background: transparent;
+        border: 0;
+        border-radius: 0;
+        overflow: visible;
     }
 
-    /* Scale directory viewer to columns instead of a vertical stack */
-    #directoryViewer.grid-layout {
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    .nav-menu a {
+        border-radius: 8px;
+        padding: 0.65rem 1rem;
+    }
+
+    main {
+        padding-top: 2rem;
+    }
+
+    .directory-hero {
+        grid-template-columns: minmax(0, 1fr) minmax(190px, 0.25fr);
+        align-items: center;
+        padding: 1.25rem;
+    }
+
+    .home-hero,
+    .home-hero img {
+        min-height: 360px;
+    }
+
+    .home-hero-copy {
+        inset: auto auto 1.5rem 1.5rem;
+        padding: 1.25rem;
+    }
+
+    .hero-intro {
+        font-size: 1rem;
+    }
+
+    .home-layout {
+        grid-template-columns: 1.3fr 0.7fr;
+    }
+
+    .board-toolbar {
+        grid-template-columns: 1fr auto;
+        align-items: center;
+        padding: 1rem 1.2rem;
+    }
+
+    .view-switch {
+        display: flex;
+    }
+
+    .view-switch button {
+        min-width: 96px;
+    }
+
+    #memberShowcase.exchange-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .site-footer {
+        grid-template-columns: 1fr auto;
+        align-items: end;
+        padding: 1.5rem clamp(1.5rem, 4vw, 3rem);
+    }
+
+    .footer-meta {
+        text-align: right;
+    }
+}
+
+@media screen and (min-width: 1040px) {
+    #memberShowcase.exchange-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .spotlight-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    #memberShowcase.ledger-list .member-profile {
+        display: block;
+    }
+
+    #memberShowcase.ledger-list .member-details {
+        grid-template-columns: minmax(180px, 1.1fr) minmax(140px, 0.7fr) minmax(230px, 1fr) auto auto;
+        gap: 1rem;
+        align-items: center;
+    }
+
+    #memberShowcase.ledger-list .sector-chip,
+    #memberShowcase.ledger-list .tier-pill,
+    #memberShowcase.ledger-list .member-contact,
+    #memberShowcase.ledger-list .profile-link {
+        align-self: center;
+    }
+
+    #memberShowcase.ledger-list .profile-link {
+        justify-self: end;
     }
 }
