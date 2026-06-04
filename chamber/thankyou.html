@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Lagos Chamber of Commerce | Thank You</title>
+    <meta name="description" content="Thank you for applying to join the Lagos Chamber of Commerce.">
+    <meta name="author" content="Sogolo Donaldson">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+
+    <meta property="og:title" content="Lagos Chamber of Commerce | Thank You">
+    <meta property="og:description" content="Thank you for applying to join the Lagos Chamber of Commerce.">
+    <meta property="og:image" content="https://saint-void.github.io/wdd231/images/lagos-chamber-logo.jpg">
+    <meta property="og:url" content="https://saint-void.github.io/wdd231/chamber/thankyou.html">
+    <meta property="og:type" content="website">
+
+    <link rel="stylesheet" href="styles/directory.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <script src="scripts/thankyou.js" defer></script>
+</head>
+<body>
+    <header class="trade-header">
+        <div class="brand-lockup">
+            <img class="brand-mark" src="../images/lagos-chamber-logo.jpg" alt="Lagos Chamber of Commerce Logo">
+            <div class="brand-copy">
+                <div class="chamber-name">Lagos Chamber</div>
+                <p class="chamber-kicker">Commerce and Industry</p>
+            </div>
+        </div>
+
+        <nav class="site-nav">
+            <button id="navToggle" class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">Menu</button>
+            <ul id="primaryNav" class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="directory-hero" aria-labelledby="thanksHeading">
+            <div class="hero-copy">
+                <p class="section-label">Application Received</p>
+                <h1 id="thanksHeading">Thank You</h1>
+                <p class="hero-intro">We appreciate your interest in the Lagos Chamber of Commerce.</p>
+            </div>
+        </section>
+
+        <section class="thanks-panel" aria-labelledby="summaryHeading">
+            <p class="section-label">Submitted Information</p>
+            <h2 id="summaryHeading">Application Summary</h2>
+            <dl id="applicationSummary" class="application-summary"></dl>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-address">
+            <h2>Lagos Chamber of Commerce & Industry</h2>
+            <p>1 Idowu Taylor Street, Victoria Island, Lagos, Nigeria</p>
+            <p>info@lagoschamber.com | +234 1 234 5678</p>
+        </div>
+        <div class="footer-meta">
+            <p>&copy; <span id="currentYear"></span> | Sogolo Donaldson | WDD 231</p>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+</body>
+</html>

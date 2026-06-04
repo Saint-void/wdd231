@@ -51,6 +51,11 @@
         grid-template-columns: 1.3fr 0.7fr;
     }
 
+    .join-layout {
+        grid-template-columns: minmax(0, 1fr) minmax(260px, 0.48fr);
+        align-items: start;
+    }
+
     .board-toolbar {
         grid-template-columns: 1fr auto;
         align-items: center;

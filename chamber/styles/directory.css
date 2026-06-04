@@ -538,6 +538,232 @@ h1 {
     background: var(--white);
 }
 
+.join-layout {
+    display: grid;
+    gap: 1rem;
+}
+
+.application-panel,
+.membership-panel,
+.thanks-panel {
+    padding: 1rem;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    background: var(--white);
+}
+
+.application-panel h2,
+.membership-panel h2,
+.thanks-panel h2 {
+    margin: 0 0 0.9rem;
+    font-family: "Libre Baskerville", Georgia, "Times New Roman", serif;
+    font-size: 1.35rem;
+    line-height: 1.2;
+}
+
+.join-form {
+    display: grid;
+    gap: 0.9rem;
+}
+
+.join-form label {
+    display: grid;
+    gap: 0.35rem;
+    color: var(--dark);
+    font-weight: 700;
+}
+
+.join-form input,
+.join-form select,
+.join-form textarea {
+    width: 100%;
+    min-height: 44px;
+    padding: 0.65rem 0.75rem;
+    border: 1px solid #9c9c9c;
+    border-radius: 6px;
+    color: var(--black);
+    background: var(--white);
+    font: inherit;
+    font-weight: 400;
+}
+
+.join-form textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.join-form input:focus,
+.join-form select:focus,
+.join-form textarea:focus {
+    outline: 3px solid #b8d8ff;
+    outline-offset: 2px;
+    border-color: var(--black);
+}
+
+.form-submit {
+    min-height: 46px;
+    border-color: var(--black);
+    color: var(--white);
+    background: var(--black);
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.form-submit:hover,
+.form-submit:focus {
+    background: var(--gray);
+}
+
+.membership-cards {
+    display: grid;
+    gap: 0.85rem;
+}
+
+.membership-card {
+    display: grid;
+    gap: 0.45rem;
+    padding: 1rem;
+    border: 1px solid var(--line);
+    border-left: 5px solid var(--black);
+    border-radius: 6px;
+    background: var(--soft);
+    animation: card-intro 700ms ease-out both;
+}
+
+.membership-card:nth-child(2) {
+    animation-delay: 120ms;
+}
+
+.membership-card:nth-child(3) {
+    animation-delay: 240ms;
+}
+
+.membership-card:nth-child(4) {
+    animation-delay: 360ms;
+}
+
+.membership-card h3,
+.membership-card p {
+    margin: 0;
+}
+
+.membership-card h3 {
+    font-size: 1rem;
+}
+
+.membership-card p {
+    color: var(--gray);
+}
+
+.membership-card a,
+.modal-close {
+    justify-self: start;
+    min-height: 38px;
+    padding: 0.5rem 0.75rem;
+    border: 0;
+    border-radius: 6px;
+    color: var(--white);
+    background: var(--black);
+    text-decoration: none;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.membership-card a:hover,
+.membership-card a:focus,
+.modal-close:hover,
+.modal-close:focus {
+    background: var(--gray);
+}
+
+.level-np {
+    border-left-color: #2f6f57;
+}
+
+.level-bronze {
+    border-left-color: #8a5a32;
+}
+
+.level-silver {
+    border-left-color: #686f7a;
+}
+
+.level-gold {
+    border-left-color: #8a6a12;
+}
+
+.membership-modal {
+    width: min(560px, calc(100% - 2rem));
+    padding: 1.25rem;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    color: var(--black);
+    background: var(--white);
+}
+
+.membership-modal::backdrop {
+    background: rgba(17, 17, 17, 0.62);
+}
+
+.membership-modal h2 {
+    margin: 0 0 0.65rem;
+    font-family: "Libre Baskerville", Georgia, "Times New Roman", serif;
+    font-size: 1.35rem;
+}
+
+.membership-modal p {
+    margin: 0 0 0.75rem;
+    color: var(--gray);
+}
+
+.membership-modal ul {
+    margin: 0 0 1rem;
+    padding-left: 1.2rem;
+}
+
+.application-summary {
+    display: grid;
+    gap: 0;
+    margin: 0;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.application-summary dt,
+.application-summary dd {
+    margin: 0;
+    padding: 0.75rem;
+}
+
+.application-summary dt {
+    color: var(--dark);
+    background: var(--soft);
+    font-weight: 700;
+}
+
+.application-summary dd {
+    border-bottom: 1px solid var(--line);
+    background: var(--white);
+}
+
+.application-summary dd:last-child {
+    border-bottom: 0;
+}
+
+@keyframes card-intro {
+    from {
+        opacity: 0;
+        transform: translateY(16px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .site-footer {
     display: grid;
     gap: 1rem;
