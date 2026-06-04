@@ -12,25 +12,16 @@
     .nav-menu {
         display: flex;
         gap: 0.4rem;
-        background: transparent;
         border: 0;
-        border-radius: 0;
-        overflow: visible;
     }
 
     .nav-menu a {
-        border-radius: 8px;
         padding: 0.65rem 1rem;
-    }
-
-    main {
-        padding-top: 2rem;
     }
 
     .directory-hero {
         grid-template-columns: minmax(0, 1fr) minmax(190px, 0.25fr);
         align-items: center;
-        padding: 1.25rem;
     }
 
     .home-hero,
@@ -40,11 +31,6 @@
 
     .home-hero-copy {
         inset: auto auto 1.5rem 1.5rem;
-        padding: 1.25rem;
-    }
-
-    .hero-intro {
-        font-size: 1rem;
     }
 
     .home-layout {
@@ -59,15 +45,6 @@
     .board-toolbar {
         grid-template-columns: 1fr auto;
         align-items: center;
-        padding: 1rem 1.2rem;
-    }
-
-    .view-switch {
-        display: flex;
-    }
-
-    .view-switch button {
-        min-width: 96px;
     }
 
     #memberShowcase.exchange-grid {
@@ -78,10 +55,6 @@
         grid-template-columns: 1fr auto;
         align-items: end;
         padding: 1.5rem clamp(1.5rem, 4vw, 3rem);
-    }
-
-    .footer-meta {
-        text-align: right;
     }
 }
 
@@ -94,24 +67,9 @@
         grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 
-    #memberShowcase.ledger-list .member-profile {
-        display: block;
-    }
-
     #memberShowcase.ledger-list .member-details {
         grid-template-columns: minmax(180px, 1.1fr) minmax(140px, 0.7fr) minmax(230px, 1fr) auto auto;
         gap: 1rem;
         align-items: center;
-    }
-
-    #memberShowcase.ledger-list .sector-chip,
-    #memberShowcase.ledger-list .tier-pill,
-    #memberShowcase.ledger-list .member-contact,
-    #memberShowcase.ledger-list .profile-link {
-        align-self: center;
-    }
-
-    #memberShowcase.ledger-list .profile-link {
-        justify-self: end;
     }
 }
