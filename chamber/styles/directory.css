@@ -50,10 +50,10 @@ a {
 .brand-mark {
     width: 54px;
     height: 54px;
-    border: 1px solid var(--line);
+    border: 1px solid black;
     border-radius: var(--radius);
     object-fit: cover;
-    background: var(--white);
+    background: black;
     filter: grayscale(100%);
 }
 
