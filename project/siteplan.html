@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Site Plan — Sogolo</title>
+	<meta name="description" content="Site plan for Sogolo — a personal portfolio and project showcase.">
+	<meta name="author" content="Sogolo Donald">
+	<meta property="og:title" content="Sogolo — Site Plan">
+	<meta property="og:description" content="Plan document for a responsive personal portfolio website for Sogolo.">
+	<meta property="og:type" content="website">
+	<link rel="icon" href="../favicon.ico" type="image/x-icon">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet">
+	<style>
+		:root {
+			--primary: #0b6e4f;
+			--accent: #f2a900;
+			--muted: #f7f7f7;
+			--text: #1f2933;
+			--max-width: 900px;
+		}
+		*{box-sizing:border-box}
+		body{
+			font-family: "DM Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+			color:var(--text);
+			background: #fff;
+			margin:0;
+			padding:2rem;
+			display:flex;
+			justify-content:center;
+		}
+		.container{max-width:var(--max-width);width:100%}
+		header{display:flex;align-items:center;gap:1rem;margin-bottom:1rem}
+		.brand {display:flex;flex-direction:column}
+		h1{font-family:"Libre Baskerville", serif;color:var(--primary);margin:0;font-size:1.75rem}
+		p.lead{margin:0;color:var(--text);opacity:0.85}
+		section{background:var(--muted);padding:1rem;border-radius:8px;margin-top:1rem}
+		.grid{display:grid;gap:1rem}
+		.two{grid-template-columns:1fr 1fr}
+		.color-swatch{height:56px;border-radius:6px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700}
+		.swatch-label{font-size:.9rem;margin-top:.5rem;text-align:center}
+		.wireframe{background:#fff;padding:1rem;border-radius:6px;border:2px dashed #e6e6e6}
+		.wire-mobile{width:260px;margin:0 auto}
+		.wire-desktop{width:100%;height:220px}
+		.wire-box{background:var(--muted);height:28px;margin-bottom:8px;border-radius:4px}
+		footer{margin-top:1.25rem;font-size:.9rem;color:#666;display:flex;justify-content:space-between;align-items:center}
+		a.button{background:var(--primary);color:#fff;padding:.5rem .75rem;border-radius:6px;text-decoration:none}
+		@media(min-width:700px){body{padding:3rem} .wire-mobile{transform:scale(1.2)}}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<header>
+			<div class="brand">
+				<h1>Sogolo — Site Plan</h1>
+				<p class="lead">A concise project plan for a responsive personal portfolio website.</p>
+			</div>
+		</header>
+
+		<main>
+			<section aria-labelledby="site-name">
+				<h2 id="site-name">Site Name</h2>
+				<p><strong>Name:</strong> Sogolo</p>
+				<p><strong>Reason:</strong> A personal portfolio and project showcase highlighting design and development work by Sogolo.</p>
+			</section>
+
+			<section aria-labelledby="purpose">
+				<h2 id="purpose">Site Purpose</h2>
+				<p>The site provides trail guides, gear recommendations, map links, and an event calendar to help hikers plan safe and enjoyable outings.</p>
+			</section>
+
+			<section aria-labelledby="scenarios">
+				<h2 id="scenarios">User Scenarios</h2>
+				<ul>
+					<li>How can I view Sogolo's recent projects and case studies?</li>
+					<li>How can I contact Sogolo for freelance work or collaboration?</li>
+				</ul>
+			</section>
+
+			<section aria-labelledby="colors">
+				<h2 id="colors">Color Scheme</h2>
+				<div class="grid two">
+					<div>
+						<div class="color-swatch" style="background:var(--primary)">Primary</div>
+						<div class="swatch-label">#0b6e4f — headings, buttons</div>
+					</div>
+					<div>
+						<div class="color-swatch" style="background:var(--accent)">Accent</div>
+						<div class="swatch-label">#f2a900 — accents, highlights</div>
+					</div>
+				</div>
+				<p>Usage: Use the primary color for prominent headings, CTAs, and navigation highlights. Use the accent color sparingly for badges and callouts.</p>
+			</section>
+
+			<section aria-labelledby="typography">
+				<h2 id="typography">Typography</h2>
+				<p><strong>Headings:</strong> Libre Baskerville (serif) — used for h1/h2 to convey trust and readability.</p>
+				<p><strong>Body:</strong> DM Sans (sans-serif) — used for body text and UI elements for clarity.</p>
+			</section>
+
+			<section aria-labelledby="wireframe">
+				<h2 id="wireframe">Wireframe</h2>
+				<p>Below are simple sketches representing the mobile and desktop home page layout.</p>
+
+				<div class="grid two">
+					<div>
+						<div class="wireframe wire-mobile" aria-hidden="true">
+							<div class="wire-box" style="height:40px;background:var(--primary)"></div>
+							<div class="wire-box" style="height:16px;width:60%"></div>
+							<div class="wire-box" style="height:12px;width:85%"></div>
+							<div class="wire-box" style="height:80px;margin-top:12px;border-radius:6px;background:linear-gradient(90deg,var(--muted),#eee)"></div>
+							<div class="wire-box" style="height:36px;background:var(--accent);color:#111;display:flex;align-items:center;justify-content:center">CTA</div>
+						</div>
+						<p class="swatch-label">Mobile: stacked, single-column with prominent CTA.</p>
+					</div>
+
+					<div>
+						<div class="wireframe wire-desktop" aria-hidden="true">
+							<div style="display:grid;grid-template-columns:220px 1fr;gap:12px;height:100%">
+								<div style="background:var(--muted);padding:8px;border-radius:6px">
+									<div class="wire-box" style="height:28px;width:80%"></div>
+									<div class="wire-box" style="height:12px;width:90%"></div>
+									<div class="wire-box" style="height:12px;width:50%"></div>
+								</div>
+								<div style="background:#fff;padding:8px;border-radius:6px">
+									<div class="wire-box" style="height:28px;background:var(--primary)"></div>
+									<div class="wire-box" style="height:140px;margin-top:10px"></div>
+								</div>
+							</div>
+						</div>
+						<p class="swatch-label">Desktop: left navigation, main content area for maps and featured trail.</p>
+					</div>
+				</div>
+			</section>
+
+			<section aria-labelledby="notes">
+				<h2 id="notes">Notes & Requirements</h2>
+				<ul>
+					  <li>Pages required: index.html (home), projects.html (portfolio & case studies), about.html (about + contact — form action page separate).</li>
+					  <li>Data: Use a local JSON file (projects.json) and fetch it with the Fetch API (include try...catch).</li>
+					  <li>Dynamic content: display at least 15 project items with 4+ properties each (title, date, summary, technologies).</li>
+					<li>Local storage: save user preferences (e.g., preferred difficulty filter, sort order).</li>
+					<li>Modal: use accessible modal for trail details (focus trap, aria-hidden toggles).</li>
+				</ul>
+			</section>
+		</main>
+
+		<footer>
+			<div>
+				<a class="button" href="index.html">Home</a>
+				<a href="attributions.html" style="margin-left:12px;color:#666;text-decoration:underline">Attributions</a>
+			</div>
+			<div>&copy; <span id="year"></span> | Sogolo Donaldson</div>
+		</footer>
+	</div>
+
+	<script>
+		// small helpers for this planning doc
+		document.getElementById('year').textContent = new Date().getFullYear();
+	</script>
+</body>
+</html>
+
+<!--
+	Replace placeholder content (site name, author, pages, scenarios) with your own project-specific details.
+	This document uses the selected color scheme and typography; adapt as needed for your final project.
+-->
+
