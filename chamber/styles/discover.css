@@ -5,11 +5,14 @@
 .discover-hero .lead{margin:0 0 0.5rem 0;color:#444}
 .visit-message{background:#fffdf0;border:1px solid #f0e6c8;padding:.5rem .75rem;border-radius:6px;margin:.5rem 0}
 
-.discover-grid{display:grid;gap:1rem;grid-auto-rows:auto}
-
-/* Small screens: single column, explicit named areas */
 .discover-grid{
-  grid-template-columns:1fr;
+  /* base grid */
+  display: grid;
+  gap: 1rem;
+  grid-auto-rows: auto;
+
+  /* Small screens: single column, explicit named areas */
+  grid-template-columns: 1fr;
   grid-template-areas:
     "c1"
     "c2"

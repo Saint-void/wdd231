@@ -16,13 +16,15 @@
 
     <meta property="og:title" content="Lagos Chamber of Commerce | Discover">
     <meta property="og:description" content="Discover local businesses, cultural sites, and hubs across Lagos.">
+    <meta property="og:url" content="https://lagoschamber.com/discover.html">
+    <meta property="og:image" content="https://saint-void.github.io/wdd231/images/lagos-chamber-logo.jpg">
 
     <link rel="stylesheet" href="styles/directory.css">
     <link rel="stylesheet" href="styles/larger.css">
     <link rel="stylesheet" href="styles/discover.css">
 
     <script src="scripts/home.js" defer></script>
-    <script type="module" src="scripts/discover.js" defer></script>
+    <script type="module" src="scripts/discover.js"></script>
 </head>
 <body>
     <header class="trade-header">
@@ -69,11 +71,7 @@
         </div>
     </footer>
 
-    <script>
-        // small helpers used across chamber pages
-        document.getElementById('currentYear').textContent = new Date().getFullYear();
-        const lastModEl = document.getElementById('lastModified');
-        if (lastModEl) lastModEl.textContent = `Last modified: ${document.lastModified}`;
-    </script>
+</body>
+</html>
 </body>
 </html>

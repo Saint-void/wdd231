@@ -2,6 +2,12 @@ import { places } from '../data/discover-data.mjs';
 
 // Builds the discover cards and handles last-visit messaging via localStorage
 document.addEventListener('DOMContentLoaded', () => {
+  // Common page helpers (moved from inline script)
+  const yearEl = document.getElementById('currentYear');
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
+  const lastModEl = document.getElementById('lastModified');
+  if (lastModEl) lastModEl.textContent = `Last modified: ${document.lastModified}`;
+
   const grid = document.getElementById('discoverGrid');
   const visitEl = document.getElementById('visitMessage');
 
