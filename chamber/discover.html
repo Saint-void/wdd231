@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Lagos Chamber of Commerce | Discover</title>
+    <meta name="description" content="Discover places of interest around Lagos: markets, hubs, and cultural sites.">
+    <meta name="author" content="Sogolo Donaldson">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+
+    <meta property="og:title" content="Lagos Chamber of Commerce | Discover">
+    <meta property="og:description" content="Discover local businesses, cultural sites, and hubs across Lagos.">
+
+    <link rel="stylesheet" href="styles/directory.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <link rel="stylesheet" href="styles/discover.css">
+
+    <script src="scripts/home.js" defer></script>
+    <script type="module" src="scripts/discover.js" defer></script>
+</head>
+<body>
+    <header class="trade-header">
+        <div class="brand-lockup">
+            <img class="brand-mark" src="images/lagos-chamber-logo.png" alt="Lagos Chamber of Commerce Logo">
+            <div class="brand-copy">
+                <div class="chamber-name">Lagos Chamber</div>
+                <p class="chamber-kicker">Commerce and Industry</p>
+            </div>
+        </div>
+
+        <nav class="site-nav">
+            <button id="navToggle" class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">Menu</button>
+            <ul id="primaryNav" class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="discover.html" class="current-page">Discover</a></li>
+                <li><a href="join.html">Join</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="discover-hero" aria-labelledby="discoverHeading">
+            <h1 id="discoverHeading">Discover Lagos — Places of Interest</h1>
+            <p class="lead">Explore local businesses, cultural sites, and hubs across Lagos.</p>
+            <div id="visitMessage" class="visit-message" role="status" aria-live="polite"></div>
+        </section>
+
+        <section class="discover-grid" id="discoverGrid" aria-label="Discover places">
+            <!-- Cards injected by scripts/discover.js -->
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-address">
+            <h2>Lagos Chamber of Commerce & Industry</h2>
+            <p>1 Idowu Taylor Street, Victoria Island, Lagos, Nigeria</p>
+            <p>info@lagoschamber.com | +234 1 234 5678</p>
+        </div>
+        <div class="footer-meta">
+            <p>&copy; <span id="currentYear"></span> | Sogolo Donaldson | WDD 231</p>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+
+    <script>
+        // small helpers used across chamber pages
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+        const lastModEl = document.getElementById('lastModified');
+        if (lastModEl) lastModEl.textContent = `Last modified: ${document.lastModified}`;
+    </script>
+</body>
+</html>
