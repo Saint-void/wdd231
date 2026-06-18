@@ -12,12 +12,15 @@
   <meta property="og:url" content="https://saint-void.github.io/wdd231/final/projects.html">
   <meta property="og:type" content="website">
   <link rel="icon" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
   <header class="site-header">
     <div class="container header-inner">
-      <h1 class="site-title">Projects</h1>
+      <a class="site-title" href="index.html">Final Project</a>
       <button id="themeToggle" class="theme-toggle" aria-pressed="false" aria-label="Toggle dark theme">🌙 <span class="sr-only">Toggle dark theme</span></button>
       <button id="navToggle" class="nav-toggle" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="hamburger" aria-hidden="true">
@@ -38,6 +41,7 @@
   </header>
 
   <main class="container">
+    <h1 class="page-title">Projects</h1>
     <section>
       <h2>Project Collection</h2>
       <p class="lead">Items below are loaded from a local JSON file via an ES module.</p>
@@ -63,7 +67,7 @@
     </div>
   </footer>
 
-  <script src="scripts/nav.js"></script>
+  <script src="scripts/nav.js" defer></script>
 
   <script type="module" src="scripts/main.mjs"></script>
   <script type="module" src="scripts/theme.mjs"></script>
