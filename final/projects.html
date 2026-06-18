@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Final Project — Projects</title>
+  <meta name="description" content="A list of projects dynamically rendered from JSON data.">
+  <meta name="author" content="Your Name">
+  <meta property="og:title" content="Final Projects">
+  <meta property="og:description" content="A dynamic list of project items loaded with the Fetch API.">
+  <link rel="icon" href="favicon.svg">
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="site-title">Projects</h1>
+      <button id="themeToggle" class="theme-toggle" aria-pressed="false" aria-label="Toggle dark theme">🌙 <span class="sr-only">Toggle dark theme</span></button>
+      <button id="navToggle" class="nav-toggle" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="hamburger" aria-hidden="true">
+          <span class="bar bar1"></span>
+          <span class="bar bar2"></span>
+          <span class="bar bar3"></span>
+        </span>
+        <span class="sr-only">Menu</span>
+      </button>
+      <nav id="main-nav" class="nav" role="navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="projects.html" aria-current="page">Projects</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section>
+      <h2>Project Collection</h2>
+      <p class="lead">Items below are loaded from a local JSON file via an ES module.</p>
+      <div id="items" class="grid" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <!-- Accessible modal -->
+  <div id="modal" class="modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-content">
+      <button class="modal-close" aria-label="Close dialog">×</button>
+      <h3 id="modalTitle"></h3>
+      <img id="modalImage" alt="" />
+      <p id="modalDescription"></p>
+      <p><strong>Category:</strong> <span id="modalCategory"></span></p>
+      <p><strong>Date:</strong> <span id="modalDate"></span></p>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2026 Final Project</p>
+    </div>
+  </footer>
+
+  <script>
+    // Reuse small nav toggle for this page (adds animation class)
+    const navToggle = document.getElementById('navToggle');
+    const mainNav = document.getElementById('main-nav');
+    navToggle.addEventListener('click', () => {
+      const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+      navToggle.setAttribute('aria-expanded', String(!expanded));
+      navToggle.classList.toggle('open');
+      mainNav.classList.toggle('open');
+    });
+  </script>
+
+  <script type="module" src="scripts/main.mjs"></script>
+  <script type="module" src="scripts/theme.mjs"></script>
+</body>
+</html>

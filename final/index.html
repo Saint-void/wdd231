@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Final Project — Home</title>
+  <meta name="description" content="Final project scaffold home page.">
+  <meta name="author" content="Your Name">
+  <meta property="og:title" content="Final Project">
+  <meta property="og:description" content="A small project site demonstrating dynamic JS and responsive design.">
+  <link rel="icon" href="favicon.svg">
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="site-title">Final Project</h1>
+      <button id="themeToggle" class="theme-toggle" aria-pressed="false" aria-label="Toggle dark theme">🌙 <span class="sr-only">Toggle dark theme</span></button>
+      <button id="navToggle" class="nav-toggle" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="hamburger" aria-hidden="true">
+          <span class="bar bar1"></span>
+          <span class="bar bar2"></span>
+          <span class="bar bar3"></span>
+        </span>
+        <span class="sr-only">Menu</span>
+      </button>
+      <nav id="main-nav" class="nav" role="navigation">
+        <ul>
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h2>Build something you love</h2>
+      <p>This scaffold provides starter pages, an ES module data fetcher, and dynamic rendering for a collection of items. Visit the Projects page to see the dynamic list.</p>
+      <p><a class="btn" href="projects.html">View Projects</a></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2026 Final Project — Author</p>
+    </div>
+  </footer>
+
+  <script>
+    // Simple nav toggle for small screens (adds animation class)
+    const navToggle = document.getElementById('navToggle');
+    const mainNav = document.getElementById('main-nav');
+    navToggle.addEventListener('click', () => {
+      const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+      navToggle.setAttribute('aria-expanded', String(!expanded));
+      navToggle.classList.toggle('open');
+      mainNav.classList.toggle('open');
+    });
+  </script>
+  <script type="module" src="scripts/theme.mjs"></script>
+</body>
+</html>
