@@ -2,12 +2,15 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Final Project — Projects</title>
-  <meta name="description" content="A list of projects dynamically rendered from JSON data.">
-  <meta name="author" content="Your Name">
-  <meta property="og:title" content="Final Projects">
-  <meta property="og:description" content="A dynamic list of project items loaded with the Fetch API.">
+  <meta name="description" content="A dynamic collection of project items loaded from local JSON via ES modules, demonstrating accessible markup, responsive grid layout, and an accessible modal.">
+  <meta name="author" content="Donaldson Sogolo">
+  <meta property="og:title" content="Final Project — Projects & Case Studies">
+  <meta property="og:description" content="A dynamic collection of project items loaded from local JSON via ES modules, demonstrating accessible markup, responsive grid layout, and an accessible modal.">
+  <meta property="og:image" content="https://saint-void.github.io/wdd231/images/profile.jpg">
+  <meta property="og:url" content="https://saint-void.github.io/wdd231/final/projects.html">
+  <meta property="og:type" content="website">
   <link rel="icon" href="favicon.svg">
   <link rel="stylesheet" href="styles/style.css">
 </head>
@@ -60,17 +63,7 @@
     </div>
   </footer>
 
-  <script>
-    // Reuse small nav toggle for this page (adds animation class)
-    const navToggle = document.getElementById('navToggle');
-    const mainNav = document.getElementById('main-nav');
-    navToggle.addEventListener('click', () => {
-      const expanded = navToggle.getAttribute('aria-expanded') === 'true';
-      navToggle.setAttribute('aria-expanded', String(!expanded));
-      navToggle.classList.toggle('open');
-      mainNav.classList.toggle('open');
-    });
-  </script>
+  <script src="scripts/nav.js"></script>
 
   <script type="module" src="scripts/main.mjs"></script>
   <script type="module" src="scripts/theme.mjs"></script>

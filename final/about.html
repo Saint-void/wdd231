@@ -2,10 +2,15 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Final Project — About</title>
-  <meta name="description" content="About the final project scaffold">
-  <meta name="author" content="Your Name">
+  <meta name="description" content="Details about the final project scaffold, including semantic HTML, responsive CSS, JavaScript modules for dynamic content, and accessible UI patterns.">
+  <meta name="author" content="Donaldson Sogolo">
+  <meta property="og:title" content="Final Project — About the Scaffold & Implementation Details">
+  <meta property="og:description" content="Details about the final project scaffold, including semantic HTML, responsive CSS, JavaScript modules for dynamic content, and accessible UI patterns.">
+  <meta property="og:image" content="https://saint-void.github.io/wdd231/images/profile.jpg">
+  <meta property="og:url" content="https://saint-void.github.io/wdd231/final/about.html">
+  <meta property="og:type" content="website">
   <link rel="icon" href="favicon.svg">
   <link rel="stylesheet" href="styles/style.css">
 </head>
@@ -45,16 +50,7 @@
     </div>
   </footer>
 
-  <script>
-    const navToggle = document.getElementById('navToggle');
-    const mainNav = document.getElementById('main-nav');
-    navToggle.addEventListener('click', () => {
-      const expanded = navToggle.getAttribute('aria-expanded') === 'true';
-      navToggle.setAttribute('aria-expanded', String(!expanded));
-      navToggle.classList.toggle('open');
-      mainNav.classList.toggle('open');
-    });
-  </script>
+  <script src="scripts/nav.js"></script>
   <script type="module" src="scripts/theme.mjs"></script>
 </body>
 </html>
